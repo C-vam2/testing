@@ -1,5 +1,5 @@
 package main
 
-func main(){
+func main() {
 	fmt.println("Go Program main func")
 }
