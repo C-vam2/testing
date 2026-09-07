@@ -1,0 +1,21 @@
+name: tsting CI Flow
+
+on: 
+  push:
+    branches: [main]
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up go
+        uses: actions/setup-go@v5
+
+      - name: Build
+        uses: go run ../../.
+
+
+      
+
