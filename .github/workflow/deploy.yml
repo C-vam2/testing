@@ -13,8 +13,8 @@ jobs:
       - name: Set up go
         uses: actions/setup-go@v5
 
-      - name: run
-        uses: go run ../../main.go
+      - name: build
+        uses: go build ../../. 
 
 
       
