@@ -19,5 +19,5 @@ jobs:
             go-version: '1.24'
         
         - name: Run go file
-          run: go main.go
+          run: go run main.go
 
