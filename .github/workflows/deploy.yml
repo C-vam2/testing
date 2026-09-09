@@ -25,7 +25,7 @@ jobs:
           uses: docker/build-push-action@v7
           with:
             push: true
-            tags: cvam:latest
+            tags: ${{ vars.DOCKERHUB_USERNAME }}/cvam:latest
         
         
 
