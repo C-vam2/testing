@@ -10,14 +10,22 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
-        - name: Checkout repo
+        - 
+          name: Checkout repo
           uses: actions/checkout@v6
+
+        -
+          name: Login to Docker Hub
+          uses: docker/login-action@v4
+          with:
+            username: ${{ vars.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
+        -
+          name: Build and push
+          uses: docker/build-push-action@v7
+          with:
+            push: true
+            tags: cvam:latest
         
-        - name: Setup go
-          uses: actions/setup-go@v6
-          with: 
-            go-version: '1.24'
-            
-        - name: Run go file
-          run: go run main.go
+        
 
